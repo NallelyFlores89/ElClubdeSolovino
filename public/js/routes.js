@@ -6,8 +6,12 @@ app.config(['$routeProvider',
     function($routeProvider){
       $routeProvider.
         when('/', {
-            templateUrl: 'templates/dashboard/index.html',
+            templateUrl: 'templates/index.html',
             controller: 'indexCtrl'
+        }).
+        when('/inicio', {
+            templateUrl: 'templates/profile/index.html',
+            controller: 'homeCtrl'
         })
     }
 ]);

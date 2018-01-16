@@ -1,5 +1,22 @@
 app.controller('indexCtrl',function(
-	$scope
+	$scope,
+	$location,
+	loginService
 ){
-	console.log("index");
+	$scope.doLogin = function(data){
+		loginService.login(data).then(function(res){
+			console.log(res);
+			if(res.success){
+				$location.url('/inicio');
+			}else{
+				$scope.loginError = res.error;
+			}
+		})
+	}
+});
+
+app.controller('homeCtrl',function(
+	$scope,
+){
+	console.log('inicio');
 });

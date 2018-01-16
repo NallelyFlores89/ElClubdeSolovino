@@ -25,7 +25,6 @@ class CreateextravioReportsTable extends Migration {
             $table->integer('suburb_id');
             $table->boolean('identification_plate');
             $table->string('collar_color');
-            $table->string('collar_color');
             $table->text('aditional_comments')->nullable();
             $table->integer('report_type_id')->nullable();
             $table->integer('pet_id');
