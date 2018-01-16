@@ -1,5 +1,3 @@
-
-
 app.factory('loginService',function($http, $rootScope){
   return{
       login : function(data){
