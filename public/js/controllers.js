@@ -19,6 +19,8 @@ app.controller('homeCtrl',function(
 	$scope,
 ){
 	console.log('inicio');
+	$scope.profileTab = 'mypets';
+
 });
 
 app.controller('profileCtrl',function(
