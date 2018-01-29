@@ -20,3 +20,16 @@ app.controller('homeCtrl',function(
 ){
 	console.log('inicio');
 });
+
+app.controller('profileCtrl',function(
+	$scope,
+){
+	console.log('perfil');
+});
+
+app.controller('myPetCtrl',function(
+	$scope,
+){
+	console.log('mi mascota');
+	$scope.profileTab = 'mypets';
+});

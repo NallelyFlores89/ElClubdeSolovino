@@ -12,6 +12,7 @@ class CreatestatesTable extends Migration {
 	 */
 	public function up()
 	{
+		Schema::defaultStringLength(191);
 		Schema::create('states', function(Blueprint $table) {
             $table->increments('id');
             

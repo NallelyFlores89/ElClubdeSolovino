@@ -12,6 +12,7 @@ class CreatesuburbsTable extends Migration {
 	 */
 	public function up()
 	{
+		Schema::defaultStringLength(191);
 		Schema::create('suburbs', function(Blueprint $table) {
             $table->increments('id');
             

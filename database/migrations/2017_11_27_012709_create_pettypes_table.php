@@ -12,6 +12,7 @@ class CreatepetTypesTable extends Migration {
 	 */
 	public function up()
 	{
+		Schema::defaultStringLength(191);
 		Schema::create('pet_types', function(Blueprint $table) {
             $table->increments('id');
             

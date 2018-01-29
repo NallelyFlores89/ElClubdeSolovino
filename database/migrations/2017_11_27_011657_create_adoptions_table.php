@@ -12,6 +12,7 @@ class CreateadoptionsTable extends Migration {
 	 */
 	public function up()
 	{
+		Schema::defaultStringLength(191);
 		Schema::create('adoptions', function(Blueprint $table) {
             $table->increments('id');
             $table->string('title');
