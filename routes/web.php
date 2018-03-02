@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 Route::post('/login', 'UserController@authenticate');
 Route::get('/logout', 'UserController@logout');
+
+
+Route::group(['middleware' => 'auth'], function(){
+	Route::get('/perfil', function () {
+	    return view('profile');
+	});
+});
