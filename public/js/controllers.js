@@ -5,9 +5,8 @@ app.controller('indexCtrl',function(
 ){
 	$scope.doLogin = function(data){
 		loginService.login(data).then(function(res){
-			console.log(res);
 			if(res.success){
-				$location.url('/inicio');
+				window.location.replace("/perfil/");
 			}else{
 				$scope.loginError = res.error;
 			}
