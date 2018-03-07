@@ -1,5 +1,7 @@
 var app = angular.module("solovino", [
-	'ngRoute'
+	'ngRoute',
+    'ui.bootstrap',
+    'ngFileUpload'
 ]);
 
 app.config(['$routeProvider',
