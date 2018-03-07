@@ -1,0 +1,106 @@
+<div class="modal-solovino">
+    <script type="text/ng-template" id="new_pet.html">
+      <div class="modal-header">
+        <h5 class="modal-title">Nueva mascota</h5>
+        <button type="button" ng-click="close()" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <form id="newPetForm" name="newPetForm">
+            <div class="form-group" ng-show="!pet.photo">
+              <div 
+                class="col-12 pet-photo" 
+                ngf-select 
+                ngf-drop
+                ng-model="pet.photo" 
+                name="file" 
+                ngf-pattern="'image/*'"
+                ngf-accept="'image/*'" 
+                ngf-max-size="20MB"
+                ngf-resize="{width: 180, height: 180, quality: .8, type: 'image/jpeg',ratio: '1:2', centerCrop: true, pattern='.jpg', restoreExif: false}"
+
+              >
+                  Selecciona o arrastra una foto
+                </div>
+            </div>
+            <div class="form-group text-right" ng-show="pet.photo">
+              <span class="oi oi-trash" ng-click="pet.photo = null"></span>
+              <img class="col-12 pet-photo-preview" ngf-src="pet.photo">
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Nombre</label>
+              <input type="text" class="form-control" ng-model="pet.name" required>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Especie</label>
+              <select 
+                class="form-control" 
+                ng-model="pet.kind_id" 
+                ng-options="kind.id as kind.kind for kind in kinds"
+                required
+              >
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Raza</label>
+              <select 
+                class="form-control" 
+                ng-model="pet.race_id" 
+                ng-options="race.id as race.race for race in races" required>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Fecha de nacimiento</label>
+              <div class="input-group">
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  uib-datepicker-popup 
+                  ng-model="pet.birthday" 
+                  is-open="birthdayCalendar.opened" 
+                  datepicker-options="dateOptions" 
+                  ng-required="true" 
+                  close-text="Close" 
+                  show-button-bar = "false"
+                />
+                <div class="input-group-append">
+                  <div class="input-group-text oi oi-calendar" ng-click="openBirthdayCalendar()"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Fecha de adquisición</label>
+              <div class="input-group">
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  uib-datepicker-popup 
+                  ng-model="pet.acquisition" 
+                  is-open="acquisitionCalendar.opened" 
+                  datepicker-options="dateOptions" 
+                  ng-required="true" 
+                  close-text="Close" 
+                  show-button-bar = "false"
+                />
+                <div class="input-group-append">
+                  <div class="input-group-text oi oi-calendar" ng-click="openAcquisitionCalendar()"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-form-label">Color</label>
+              <select 
+                class="form-control" 
+                ng-model="pet.color_id" 
+                ng-options="color.id as color.color for color in colors">
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" ng-click="save(pet)">Guardar</button>
+            </div>
+          </form>
+      </div>
+  </script>
+</div>
