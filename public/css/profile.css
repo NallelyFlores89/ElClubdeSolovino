@@ -1,1 +1,35 @@
- 
+.modal.fade.in {
+  opacity: 1;
+}
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal-backdrop.in {
+  opacity: 0.5;
+  /* opacity: $modal-backdrop-opacity; (SCSS) */
+}
+.card-img-top{
+	height: 180px;
+}
+
+body{
+	font-family: 'Nunito', sans-serif;
+}
+
+.pet-photo{
+	height: 180px;
+	border: 1px dotted #bdbdbd;
+	text-align: center;
+	line-height: 180px;
+}
+.pet-photo-preview{
+	height: 180px;
+	border: 1px dotted #bdbdbd;
+	padding: 0;
+}
+
+.input-group-append .oi{
+	top: 0px;
+	cursor: pointer;
+	padding-top: 15px;
+}
