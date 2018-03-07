@@ -1,35 +1,42 @@
 <div class="col-xs-12 text-right">
-  <button type="button" class="btn btn-primary">Nueva mascota</button>
+  <button type="button" class="btn btn-primary" ng-click="newPet()">Nueva mascota</button>
 </div>
 <div class="card-deck">
-  <div class="col-xs-12 col-md-2 col-lg-3">
+  <div class="col-xs-12 col-md-2 col-lg-3" ng-repeat="pet in pets">
     <div class="card">
-      <img class="card-img-top" src="images/pets/dog.jpg" alt="Mascota 1">
+      <img class="card-img-top" src="{{pet.photo}}" alt="{{pet.name}}">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">{{pet.name}}</h5>
+        <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-xs-12 col-md-2 col-lg-3">
-    <div class="card">
-      <img class="card-img-top" src="images/pets/dog.jpg" alt="Mascota 1">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">
+          <button class="btn btn-default" ng-click="edit(pet.id)">
+            <span class="oi oi-pencil"></span>
+            Editar información
+          </button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-default" ng-click="petLost(pet.id)">
+            <span class="oi oi-warning"></span>
+            ¡Me he perdido!
+          </button>
+        </li>
+        <li class="list-group-item">
+          <button class="btn btn-default" ng-click="showCalendar(pet.id)">
+            <span class="oi oi-calendar"></span>
+            Mi agenda
+          </button>
+        </li>        
+        <li class="list-group-item">
+          <button class="btn btn-default" ng-click="delete(pet.id)">
+            <span class="oi oi-trash"></span>
+            Eliminar
+          </button>
+        </li>
       </ul>
     </div>
   </div>
 </div>
+<div ng-include="'templates/profile/new_pet.html'"></div>
