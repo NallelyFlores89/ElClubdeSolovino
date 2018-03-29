@@ -12,7 +12,7 @@
         <script type="text/javascript" src="{{asset('js/ng-file-upload-shim.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('js/ng-file-upload.js')}}"></script>
         <script type="text/javascript" src="{{asset('js/profile.routes.js')}}"></script>
-        <script type="text/javascript" src="{{asset('js/services.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/profile.services.js')}}"></script>
         <script type="text/javascript" src="{{asset('js/profile.controllers.js')}}"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.min.js"></script>
