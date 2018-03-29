@@ -52,6 +52,14 @@
               </select>
             </div>
             <div class="form-group">
+              <label class="col-form-label">Género</label>
+              <select 
+                class="form-control" 
+                ng-model="pet.gender" 
+                ng-options="gender.id as gender.gender for gender in genders" required>
+              </select>
+            </div>
+<!--             <div class="form-group">
               <label class="col-form-label">Fecha de nacimiento</label>
               <div class="input-group">
                 <input 
@@ -88,7 +96,7 @@
                   <div class="input-group-text oi oi-calendar" ng-click="openAcquisitionCalendar()"></div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="form-group">
               <label class="col-form-label">Color</label>
               <select 
