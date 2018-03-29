@@ -14,7 +14,8 @@ app.controller('profileCtrl',function(
 app.controller('myPetCtrl',function(
 	$scope,
 	$document,
-	$uibModal
+	$uibModal,
+	petService
 ){
 	$scope.profileTab = 'mypets';
 	$scope.pets = [
@@ -51,6 +52,9 @@ app.controller('myPetCtrl',function(
 	    modalInstance.result.then(function(res){
 	    	if(res){
 	    		$scope.pets.push(res);
+	    		petService.save(res).then(function(res){
+	    			console.log(res);
+	    		});
 	    	}
 	    }, function(res){
 	    });
@@ -66,6 +70,11 @@ app.controller('NewPetCtrl', function(
   		{'id':'1','kind':'Gato'},
   		{'id':'2','kind':'Perro'},
   		{'id':'3','kind':'Ave'}
+  	];
+
+  	$scope.genders = [
+  		{'id':'1','gender':'Hembra'},
+  		{'id':'2','gender':'Macho'},
   	];
 
   	$scope.colors = [
