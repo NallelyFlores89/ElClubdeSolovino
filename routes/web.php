@@ -22,4 +22,6 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/perfil', function () {
 	    return view('profile');
 	});
+
+    Route::resource('pets', 'PetController');
 });
