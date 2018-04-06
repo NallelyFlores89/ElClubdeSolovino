@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Solovino</title>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>

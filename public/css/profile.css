@@ -33,3 +33,7 @@ body{
 	cursor: pointer;
 	padding-top: 15px;
 }
+
+#map {
+    height: 600px;
+}
