@@ -34,6 +34,11 @@ body{
 	padding-top: 15px;
 }
 
+.btnTarjet{
+	font-size: 20px;
+}
+
 #map {
-    height: 600px;
+    height: 300px;
+    width: 100%;
 }

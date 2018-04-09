@@ -1,3 +1,8 @@
+<!-- <script 
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMsTBu2xJm2BWzk0Hy1_MM_yZ_-7650Uc&callback=initMap&?libraries=places" 
+  async 
+  defer>
+</script> -->
 <div class="modal-solovino">
     <script type="text/ng-template" id="pet_lost.html">
       <div class="modal-header">
@@ -13,28 +18,43 @@
         <img 
           class="card-img-top" 
           src="https://misanimales.com/wp-content/uploads/2016/10/cara-de-un-perro.jpg"
-
         >
+        <br><br>
         <p>
-          <strong>Raza :</strong>
+          <strong>Raza :</strong> Mestizo
         </p>
         <p>
-          <strong>Edad :</strong>
+          <strong>Edad :</strong> 2 años
         </p>
         <p>
-          <strong>Fecha de extravío :</strong>
+          <strong>Fecha de extravío :</strong> 5 de enero del 2018
         </p>
         <p>
-          <strong>Características :</strong>
+          <strong>Características :</strong> Bla bla
         </p>
         <p>
-          <strong>Contacto :</strong>
+          <strong>Contacto :</strong> Nallely Flores, 55 81 72 53 83
         </p>
-
+        <p>
+          <strong>Lugar donde me perdí :</strong>
+        </p>
         <div>
-          <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
           <div id="map"></div>
         </div>
+        <p>
+          <strong>Compartir por:</strong>
+        </p>
       </div>
+      <div class="row">
+        <div class="col-6 text-center">
+          <span style="font-size:50px" class="ion-social-facebook-outline"></span>
+        </div>
+        <div class="col-6 text-center">
+          <span style="font-size:50px" class="ion-social-twitter-outline"></span>
+        </div>
+      </div>
+      <button class="btn btn-default" ng-click="post(data)">
+        Publicar
+      </button>
   </script>
 </div>
